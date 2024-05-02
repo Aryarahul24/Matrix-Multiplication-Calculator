@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Multiplication Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+       .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+       .matrix-input {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .matrix-input label {
+            margin-right: 10px;
+        }
+       .matrix-input input[type="number"] {
+            width: 40px;
+            height: 30px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+       .matrix-input button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       .matrix-input button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Matrix Multiplication Calculator</h2>
+        <form id="matrix-form">
+            <div class="matrix-input">
+                <label for="matrixA-rows">Matrix A Rows:</label>
+                <input type="number" id="matrixA-rows" value="2" min="1">
+                <label for="matrixA-cols">Matrix A Columns:</label>
+                <input type="number" id="matrixA-cols" value="2" min="1">
+                <label for="matrixB-rows">Matrix B Rows:</label>
+                <input type="number" id="matrixB-rows" value="2" min="1">
+                <label for="matrixB-cols">Matrix B Columns:</label>
+                <input type="number" id="matrixB-cols" value="2" min="1">
+                <button id="generate-matrixA">Generate Matrix A</button>
+                <button id="generate-matrixB">Generate Matrix B</button>
+            </div>
+            <div id="matrix-inputs">
+                <!-- Matrix input fields will be generated here -->
+            </div>
+            <button id="calculate-multiplication">Calculate Multiplication</button>
+            <div id="result"></div>
+        </form>
+        <div id="error-message" style="display:none; color:red;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
